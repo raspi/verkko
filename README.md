@@ -71,6 +71,9 @@ Is:
 # Example range:
 
 ```
+% python main.py range 192.168.0.0 192.168.0.255
+192.168.0.0/24   192.168.0.0 - 192.168.0.255 with 256 address(es)
+
 % python main.py range 192.168.0.1 192.168.1.128
 192.168.0.1/32   192.168.0.1 - 192.168.0.1 with 1 address(es)
 192.168.0.2/31   192.168.0.2 - 192.168.0.3 with 2 address(es)
