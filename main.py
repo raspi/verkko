@@ -157,10 +157,10 @@ if __name__ == '__main__':
             addr1 = ipaddress.ip_address(arg[0])
             addr2 = ipaddress.ip_address(arg[1])
         except ValueError as e:
-            print(f"wot is {arg}?", file=sys.stderr)
+            print(f"wot is {arg}? {e}", file=sys.stderr)
             sys.exit(1)
         for i in ipaddress.summarize_address_range(addr1, addr2):
-            print(i)
+            print(f"{i}   {i.network_address} - {i.broadcast_address} with {i.num_addresses} address(es)")
     elif subparser_name == 'ip':
         """
         IP Address
